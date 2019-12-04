@@ -12,4 +12,12 @@ public class Wypozyczenia {
     public void setWypozyczenia(List<Wypozyczenie> wypozyczenia) {
         this.wypozyczenia = wypozyczenia;
     }
+    
+    public void dodajWypozyczenie() {
+        
+    }
+    
+    public void usunWypozyczenie() {
+        
+    }
 }

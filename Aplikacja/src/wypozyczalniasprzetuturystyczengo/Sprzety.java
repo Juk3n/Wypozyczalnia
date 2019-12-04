@@ -34,7 +34,8 @@ public class Sprzety {
     
     public void dodajSprzet(String nazwa) {
         if(szukajSprzet(nazwa) == null) {
-            Sprzet sprzet = new Sprzet(100, nazwa, sprzety.size());           
+            //stan 100, ponieważ zakladamy, że nowy sprzęt jests w pełni sprawny
+            Sprzet sprzet = Fabryka.stworzSprzet(100, nazwa);
             sprzety.add(sprzet);
         }
     }
