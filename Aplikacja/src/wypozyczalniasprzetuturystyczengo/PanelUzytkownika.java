@@ -25,8 +25,8 @@ public class PanelUzytkownika {
         
     }
     
-    public void dodanieSprzetu() {
-        
+    public void dodanieSprzetu(String nazwa) {
+        sprzety.dodajSprzet(nazwa);
     }
     
     public void usuniecieSprzetu() {
