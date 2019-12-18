@@ -56,7 +56,5 @@ public class Wypozyczenie {
 
     public void setData(LocalDate data) {
         this.data = data;
-    }
-    
-    
+    }   
 }

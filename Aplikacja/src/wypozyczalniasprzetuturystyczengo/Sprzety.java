@@ -28,7 +28,11 @@ public class Sprzety {
         }
     }
     
-    public void naprawSprzet() {
+    public void naprawSprzet(String nazwa) {
+        Sprzet sprzetDoNaprawy = szukajSprzet(nazwa);
+        if(sprzetDoNaprawy != null) {          
+            sprzetDoNaprawy.setStan(90);
+        }
         
     }
     

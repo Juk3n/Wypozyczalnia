@@ -28,5 +28,4 @@ public class Klient {
     public void setID(int ID) {
         this.ID = ID;
     }
-    
 }
