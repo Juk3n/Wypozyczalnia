@@ -1,18 +1,29 @@
 package wypozyczalniasprzetuturystyczengo;
-import java.util.Date;
+import java.time.LocalDate;
+import java.time.Duration; 
 
 public class Wypozyczenie {
     private Klient klient;
     private Sprzet sprzet;
     private int ilosc;
-    private Date data;
+    private LocalDate data;
+    private final int maxOkresWypozyczenia = 14;
     
     public int naliczOplate() {
-        return 0;
+       LocalDate today = LocalDate.now();
+       Duration diff = Duration.between(data.atStartOfDay(), today.atStartOfDay());
+       int diffDays = (int)diff.toDays();
+       int wysokoscOplaty = (int)diffDays * sprzet.getCenaZaDzien(); 
+       
+       
+       if(diffDays >= maxOkresWypozyczenia)
+           wysokoscOplaty += naliczKare(diffDays - maxOkresWypozyczenia);
+        
+       return wysokoscOplaty; 
     }
     
-    private int naliczKare() {
-        return 0;
+    private int naliczKare(int nadywzkaDni) {
+        return nadywzkaDni * 2 * sprzet.getCenaZaDzien();
     }
 
     public Klient getKlient() {
@@ -39,11 +50,11 @@ public class Wypozyczenie {
         this.ilosc = ilosc;
     }
 
-    public Date getData() {
+    public LocalDate getData() {
         return data;
     }
 
-    public void setData(Date data) {
+    public void setData(LocalDate data) {
         this.data = data;
     }
     
