@@ -4,6 +4,15 @@ public class Sprzet {
     private int stan;
     private String nazwa;
     private int cenaZaDzien; 
+    private boolean wypozyczony;
+
+    public boolean isWypozyczony() {
+        return wypozyczony;
+    }
+
+    public void setWypozyczony(boolean wypozyczony) {
+        this.wypozyczony = wypozyczony;
+    }
 
     public int getCenaZaDzien() {
         return cenaZaDzien;

@@ -43,4 +43,14 @@ public class Sprzety {
             sprzety.add(sprzet);
         }
     }
+    
+    public void wypozyczSprzet(Sprzet sprzetDoWypozyczenia) {
+        if(sprzetDoWypozyczenia.isWypozyczony() == false) 
+            sprzetDoWypozyczenia.setWypozyczony(true);
+    }
+    
+    public void zwrocSprzet(Sprzet sprzetDoZwrotu) {
+        if(sprzetDoZwrotu.isWypozyczony() == true) 
+            sprzetDoZwrotu.setWypozyczony(false);
+    }
 }

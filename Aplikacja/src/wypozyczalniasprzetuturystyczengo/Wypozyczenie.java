@@ -3,20 +3,32 @@ import java.time.LocalDate;
 import java.time.Duration; 
 
 public class Wypozyczenie {
+    private int ID;
     private Klient klient;
     private Sprzet sprzet;
     private int ilosc;
     private LocalDate data;
     private final int maxOkresWypozyczenia = 14;
     
+    public Wypozyczenie(Klient klient, Sprzet sprzet, int ilosc, int id) {
+        
+    }
+    
+    public int getID() {
+        return ID;
+    }
+
+    public void setID(int ID) {
+        this.ID = ID;
+    }
+    
     public int naliczOplate() {
        LocalDate today = LocalDate.now();
        Duration diff = Duration.between(data.atStartOfDay(), today.atStartOfDay());
        int diffDays = (int)diff.toDays();
-       int wysokoscOplaty = (int)diffDays * sprzet.getCenaZaDzien(); 
+       int wysokoscOplaty = (int)diffDays * sprzet.getCenaZaDzien();     
        
-       
-       if(diffDays >= maxOkresWypozyczenia)
+       if(diffDays > maxOkresWypozyczenia)
            wysokoscOplaty += naliczKare(diffDays - maxOkresWypozyczenia);
         
        return wysokoscOplaty; 

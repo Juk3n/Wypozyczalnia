@@ -13,8 +13,13 @@ public class Wypozyczenia {
         this.wypozyczenia = wypozyczenia;
     }
     
-    public void dodajWypozyczenie() {
-        
+    public Wypozyczenie szukajWypozyczenie(int id) {
+        return null;
+    }
+    
+    public void dodajWypozyczenie(Klient klient, Sprzet sprzet, int ilosc) {
+        Wypozyczenie wypozyczenie = new Wypozyczenie(klient, sprzet, ilosc, wypozyczenia.size());
+        wypozyczenia.add(wypozyczenie);
     }
     
     public void usunWypozyczenie() {
