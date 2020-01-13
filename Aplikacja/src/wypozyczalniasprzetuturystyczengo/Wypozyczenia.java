@@ -22,7 +22,7 @@ public class Wypozyczenia {
         wypozyczenia.add(wypozyczenie);
     }
     
-    public void usunWypozyczenie() {
+    public void usunWypozyczenie(int id) {
         
     }
 }

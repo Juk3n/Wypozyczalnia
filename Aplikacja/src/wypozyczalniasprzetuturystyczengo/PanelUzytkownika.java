@@ -2,6 +2,24 @@ package wypozyczalniasprzetuturystyczengo;
 
 public class PanelUzytkownika {
     private Sprzety sprzety;
+    private Klienci klienci;
+    private Wypozyczenia wypozyczenia;
+
+    public Klienci getKlienci() {
+        return klienci;
+    }
+
+    public void setKlienci(Klienci klienci) {
+        this.klienci = klienci;
+    }
+
+    public Wypozyczenia getWypozyczenia() {
+        return wypozyczenia;
+    }
+
+    public void setWypozyczenia(Wypozyczenia wypozyczenia) {
+        this.wypozyczenia = wypozyczenia;
+    }
     
     public Sprzety getSprzety() {
         return sprzety;

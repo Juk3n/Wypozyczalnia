@@ -50,13 +50,13 @@ public class Sprzety {
         }
     }
     
-    public void wypozyczSprzet(Sprzet sprzetDoWypozyczenia) {
-        if(sprzetDoWypozyczenia.isWypozyczony() == false) 
-            sprzetDoWypozyczenia.setWypozyczony(true);
+    public void wypozyczSprzet(Sprzet sprzet) {
+        if(sprzet.isWypozyczony() == false) 
+            sprzet.setWypozyczony(true);
     }
     
-    public void zwrocSprzet(Sprzet sprzetDoZwrotu) {
-        if(sprzetDoZwrotu.isWypozyczony() == true) 
-            sprzetDoZwrotu.setWypozyczony(false);
+    public void zwrocSprzet(Sprzet sprzet) {
+        if(sprzet.isWypozyczony() == true) 
+            sprzet.setWypozyczony(false);
     }
 }

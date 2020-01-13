@@ -32,8 +32,7 @@ public class Wypozyczenie {
        int diffDays = (int)diff.toDays();
        int wysokoscOplaty = (int)diffDays * sprzet.getCenaZaDzien();     
        
-       if(diffDays > maxOkresWypozyczenia)
-           wysokoscOplaty += naliczKare(diffDays - maxOkresWypozyczenia);
+       wysokoscOplaty += naliczKare(diffDays - maxOkresWypozyczenia);
         
        return wysokoscOplaty; 
     }
