@@ -5,6 +5,10 @@ import java.util.List;
 public class Sprzety {
     private List<Sprzet> sprzety;
         
+    public Sprzety() {
+        
+    }
+    
     public List<Sprzet> getSprzety() {
         return sprzety;
     }
@@ -12,10 +16,12 @@ public class Sprzety {
     public void setSprzety(List<Sprzet> sprzety) {
         this.sprzety = sprzety;
     }
-    
+    //wszystko dobrze, wszystko niebylo, null
     public Sprzet szukajSprzet(String nazwa) {
         for(int i = 0; i < sprzety.size(); i++) {
+            
             if(nazwa.compareTo(sprzety.get(i).getNazwa()) == 1)
+                
                 return sprzety.get(i);
         } 
         return null;

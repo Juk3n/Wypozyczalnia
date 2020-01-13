@@ -6,6 +6,10 @@ public class Sprzet {
     private int cenaZaDzien; 
     private boolean wypozyczony;
 
+    public Sprzet() {
+        
+    }
+    
     public boolean isWypozyczony() {
         return wypozyczony;
     }

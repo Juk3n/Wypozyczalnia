@@ -14,6 +14,10 @@ public class Wypozyczenie {
         
     }
     
+    public Wypozyczenie() {
+        
+    }
+    
     public int getID() {
         return ID;
     }
@@ -34,8 +38,11 @@ public class Wypozyczenie {
        return wysokoscOplaty; 
     }
     
-    private int naliczKare(int nadywzkaDni) {
-        return nadywzkaDni * 2 * sprzet.getCenaZaDzien();
+    public int naliczKare(int nadywzkaDni) {
+        if(nadywzkaDni > 0)
+            return nadywzkaDni * 100;
+        else 
+            return 0;
     }
 
     public Klient getKlient() {

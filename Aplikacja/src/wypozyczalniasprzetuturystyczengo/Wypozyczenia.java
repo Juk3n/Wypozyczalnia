@@ -16,7 +16,7 @@ public class Wypozyczenia {
     public Wypozyczenie szukajWypozyczenie(int id) {
         return null;
     }
-    
+        
     public void dodajWypozyczenie(Klient klient, Sprzet sprzet, int ilosc) {
         Wypozyczenie wypozyczenie = new Wypozyczenie(klient, sprzet, ilosc, wypozyczenia.size());
         wypozyczenia.add(wypozyczenie);
