@@ -11,7 +11,6 @@ public class Sprzet {
         setStan(stan);
         setCenaZaDzien(10);
         setWypozyczony(false);
-        //test
     }
     
     public Sprzet() {
