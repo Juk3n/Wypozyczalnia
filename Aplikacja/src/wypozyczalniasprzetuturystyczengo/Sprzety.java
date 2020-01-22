@@ -1,12 +1,13 @@
 package wypozyczalniasprzetuturystyczengo;
 
 import java.util.List;
+import java.util.ArrayList;
 
 public class Sprzety {
-    private List<Sprzet> sprzety;
+    private List<Sprzet> sprzety = new ArrayList();
         
     public Sprzety() {
-        
+         
     }
     
     public List<Sprzet> getSprzety() {
@@ -18,10 +19,8 @@ public class Sprzety {
     }
     //wszystko dobrze, wszystko niebylo, null
     public Sprzet szukajSprzet(String nazwa) {
-        for(int i = 0; i < sprzety.size(); i++) {
-            
-            if(nazwa.compareTo(sprzety.get(i).getNazwa()) == 1)
-                
+        for(int i = 0; i < sprzety.size(); i++) {        
+            if(nazwa == sprzety.get(i).getNazwa())
                 return sprzety.get(i);
         } 
         return null;
@@ -36,10 +35,10 @@ public class Sprzety {
     
     public void naprawSprzet(String nazwa) {
         Sprzet sprzetDoNaprawy = szukajSprzet(nazwa);
-        if(sprzetDoNaprawy != null) {          
-            sprzetDoNaprawy.setStan(90);
-        }
-        
+        if(sprzetDoNaprawy != null) { 
+            if(sprzetDoNaprawy.getStan() < 90)
+                sprzetDoNaprawy.setStan(90);
+        }     
     }
     
     public void dodajSprzet(String nazwa) {

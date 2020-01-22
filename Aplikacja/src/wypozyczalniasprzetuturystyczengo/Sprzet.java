@@ -6,6 +6,14 @@ public class Sprzet {
     private int cenaZaDzien; 
     private boolean wypozyczony;
 
+    public Sprzet(int stan, String nazwa) {
+        setNazwa(nazwa);
+        setStan(stan);
+        setCenaZaDzien(10);
+        setWypozyczony(false);
+        //test
+    }
+    
     public Sprzet() {
         
     }
